@@ -1,0 +1,31 @@
+.page { max-width: 1200px; margin: 0 auto; padding: 60px 24px 80px; display: flex; flex-direction: column; gap: 40px; }
+
+.hero { padding: 20px 0 10px; }
+
+/* Config */
+.configCard { padding: 36px; border-radius: var(--r-xl); display: flex; flex-direction: column; gap: 28px; }
+.configGrid { display: flex; flex-direction: column; gap: 24px; }
+.cLabel { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-3); font-weight: 600; margin-bottom: 10px; }
+
+/* Day Tabs */
+.tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { padding: 8px 20px; border-radius: var(--r-full); border: 1px solid var(--border); background: var(--bg-card); color: var(--text-3); font-size: 0.82rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+.tabActive { background: rgba(255,255,255,0.1); border-color: var(--border-hi); color: var(--text); }
+
+/* Meal Cards */
+.mealGrid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+@media (max-width: 600px) { .mealGrid { grid-template-columns: 1fr; } }
+.mealCard { padding: 24px; border-radius: var(--r-xl); display: flex; flex-direction: column; gap: 8px; }
+.mealTime { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); font-weight: 700; }
+.mealName { font-size: 0.95rem; font-weight: 700; letter-spacing: -0.02em; }
+.mealMeta { font-size: 0.78rem; color: var(--text-3); display: flex; gap: 6px; }
+
+/* Grocery */
+.groceryBox { border-radius: var(--r-xl); overflow: hidden; }
+.groceryToggle { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 28px; background: none; border: none; color: var(--text); font-size: 0.95rem; font-weight: 600; cursor: pointer; font-family: inherit; letter-spacing: -0.01em; }
+.groceryInner { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; padding: 0 28px 28px; }
+.groceryCat { display: flex; flex-direction: column; gap: 8px; }
+.groceryCatLabel { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--purple); font-weight: 700; }
+.groceryList { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.groceryList li { font-size: 0.83rem; color: var(--text-2); }

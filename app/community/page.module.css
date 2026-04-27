@@ -1,0 +1,37 @@
+.page { max-width: 1200px; margin: 0 auto; padding: 60px 24px 80px; display: flex; flex-direction: column; gap: 40px; }
+
+/* Challenge Grid */
+.challengeGrid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+@media (max-width: 700px) { .challengeGrid { grid-template-columns: 1fr; } }
+
+.challengeCard { padding: 28px; border-radius: var(--r-xl); display: flex; flex-direction: column; gap: 12px; transition: transform 0.3s, border-color 0.2s; }
+.challengeCard:hover { transform: translateY(-3px); }
+.challengeCard.joined { border-color: rgba(255,55,95,0.3); background: rgba(255,55,95,0.05); }
+
+.cTop { display: flex; justify-content: space-between; align-items: flex-start; }
+.cIcon { font-size: 2.2rem; }
+.cMeta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.cParticipants { font-size: 0.7rem; color: var(--text-3); }
+
+.rewardRow { display: flex; justify-content: space-between; align-items: center; }
+.reward { font-size: 0.82rem; color: var(--orange); font-weight: 600; }
+.duration { font-size: 0.78rem; color: var(--text-3); }
+
+.progressSection { display: flex; flex-direction: column; gap: 6px; }
+.progressLabel { font-size: 0.72rem; color: var(--text-3); }
+
+/* Leaderboard */
+.leaderboard { overflow: hidden; border-radius: var(--r-xl); }
+.lRow { display: flex; align-items: center; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--border); transition: background 0.2s; }
+.lRow:last-child { border-bottom: none; }
+.lRow:hover { background: rgba(255,255,255,0.02); }
+.youRow { background: rgba(255,55,95,0.05); }
+.lRank { width: 32px; text-align: center; font-size: 1.3rem; flex-shrink: 0; }
+.lRankNum { font-size: 0.9rem; font-weight: 700; color: var(--text-3); }
+.lAvatar { font-size: 1.5rem; flex-shrink: 0; }
+.lInfo { flex: 1; }
+.lName { font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.lCity { font-size: 0.72rem; color: var(--text-3); margin-top: 2px; }
+.lStats { display: flex; align-items: center; gap: 14px; }
+.lStreak { font-size: 0.82rem; color: var(--orange); }
+.lScore { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.04em; color: var(--text); }

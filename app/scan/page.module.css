@@ -1,0 +1,106 @@
+.page { display: flex; flex-direction: column; gap: 0; }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 45vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 80px 48px 56px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #0a0005 0%, #000 50%, #00050a 100%);
+  border-bottom: 1px solid var(--border);
+}
+.heroOrb {
+  position: absolute;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,55,95,0.2) 0%, transparent 65%);
+  top: -100px; right: -50px;
+  pointer-events: none;
+  animation: orb 14s ease-in-out infinite;
+}
+.heroContent { position: relative; z-index: 1; max-width: 1200px; width: 100%; }
+
+/* ─── CONTENT ─── */
+.content { max-width: 1200px; margin: 0 auto; padding: 40px 24px 80px; display: flex; flex-direction: column; gap: 32px; width: 100%; }
+
+/* ─── SCAN AREA ─── */
+.modeBar {
+  display: flex;
+  gap: 4px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 4px;
+  width: fit-content;
+  border: 1px solid var(--border);
+}
+.modeBtn {
+  padding: 8px 20px;
+  border-radius: 9px;
+  border: none;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.modeActive { background: var(--bg-elevated); color: var(--text); }
+
+.cameraZone {
+  min-height: 280px;
+  border: 2px dashed var(--border);
+  border-radius: var(--r-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  padding: 48px;
+}
+.cameraZone:hover { border-color: var(--border-hi); }
+.cameraIcon { font-size: 3rem; filter: grayscale(0.3); }
+
+.videoWrap { position: relative; width: 100%; max-width: 560px; }
+.video { width: 100%; border-radius: var(--r-xl); display: block; }
+.scanOverlay {
+  position: absolute; inset: 12%;
+  border: 2px solid rgba(255,55,95,0.7);
+  border-radius: var(--r-lg);
+  pointer-events: none;
+  box-shadow: 0 0 0 9999px rgba(0,0,0,0.55);
+}
+
+.previewImg { width: 100%; max-width: 560px; border-radius: var(--r-xl); }
+
+/* ─── RESULT ─── */
+.resultHero {
+  padding: 32px;
+  border-radius: var(--r-xl);
+  background: linear-gradient(135deg, rgba(255,55,95,0.1), rgba(191,90,242,0.08));
+  border: 1px solid rgba(255,55,95,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.scoreCircle {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: conic-gradient(#30d158 0deg 270deg, rgba(255,255,255,0.06) 270deg);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+}
+.scoreNum { font-size: 1.4rem; font-weight: 900; letter-spacing: -0.04em; }
+.scoreLbl { font-size: 0.55rem; color: var(--text-3); }
+
+.swapCard { padding: 28px; border-radius: var(--r-xl); }
+.swapItem { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.swapItem:last-child { border-bottom: none; }
+
+.insightCard { padding: 28px; border-radius: var(--r-xl); }
+.insightItem { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; color: var(--text-2); display: flex; gap: 10px; }
+.insightItem:last-child { border-bottom: none; }

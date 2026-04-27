@@ -1,0 +1,18 @@
+.page { max-width: 1200px; margin: 0 auto; padding: 60px 24px 80px; display: flex; flex-direction: column; gap: 40px; }
+
+.alertList { display: flex; flex-direction: column; gap: 12px; }
+
+.alertCard { border-radius: var(--r-xl); overflow: hidden; }
+.alertHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 24px 28px; cursor: pointer; transition: background 0.2s; }
+.alertHeader:hover { background: rgba(255,255,255,0.02); }
+.aLeft { display: flex; gap: 16px; align-items: flex-start; flex: 1; }
+.aIcon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
+.aTitleRow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.aChevron { color: var(--text-4); font-size: 0.75rem; flex-shrink: 0; margin-top: 4px; }
+
+.alertBody { padding: 0 28px 28px; display: flex; flex-direction: column; gap: 16px; border-top: 1px solid var(--border); padding-top: 20px; }
+
+.trendLabel { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-3); font-weight: 600; margin-bottom: 10px; }
+
+.actionBox { padding: 14px 18px; border-radius: var(--r-md); font-size: 0.875rem; line-height: 1.6; }
+.alertFooter { display: flex; gap: 10px; }
