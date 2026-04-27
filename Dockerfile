@@ -11,6 +11,9 @@ RUN npm install
 # Copy all other project files
 COPY . .
 
+# Disable Next.js telemetry to speed up build
+ENV NEXT_TELEMETRY_DISABLED=1
+
 # Build the Next.js application
 RUN npm run build
 
