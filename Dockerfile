@@ -1,30 +1,22 @@
-FROM node:18
+FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy package files
+# Install dependencies
 COPY package.json ./
-
-# Copy everything else
-COPY . .
-
-# Remove any existing lockfiles or node_modules to prevent cross-OS compatibility issues
-RUN rm -rf package-lock.json node_modules
-
-# Install dependencies fresh
 RUN npm install --legacy-peer-deps
 
-# Disable telemetry
+# Copy everything
+COPY . .
+
+# Environment variables
 ENV NEXT_TELEMETRY_DISABLED=1
-
-# Build the Next.js application
-RUN npm run build
-
-# Set production environment
 ENV NODE_ENV=production
 ENV PORT=8080
 
-EXPOSE 8080
+# Build Next.js
+RUN npm run build
 
-# Start the Next.js server
+# Expose port and start
+EXPOSE 8080
 CMD ["npm", "start"]
